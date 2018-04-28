@@ -1,0 +1,10 @@
+.search-box-Button {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.search-box-Button:hover {
+    background-color: black;
+    color: white;
+}

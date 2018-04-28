@@ -1,0 +1,4 @@
+.navbar-nav>li.active>a {
+    color: #fff;
+    border-bottom: #fff solid 0.1rem;
+}
