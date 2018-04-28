@@ -3,8 +3,10 @@
   <button class="navbar-toggler" type="button" (click)="toggleNav()">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="navbar-collapse" [ngbCollapse]="collapseNavbar">
+    <form *ngIf="!collapseNavbar" class="form-inline my-2 my-lg-0">
+      <app-search-box></app-search-box>
+    </form>
     <ul class="navbar-nav mr-auto">
       <ng-container *ngFor="let item of menuItems">
         <li *ngIf="!(item.childs.length)" class="nav-item" routerLinkActive="active">
@@ -27,8 +29,8 @@
         </li>
       </ng-container>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-       <app-search-box></app-search-box>
+    <form *ngIf="collapseNavbar" class="form-inline my-2 my-lg-0">
+      <app-search-box></app-search-box>
     </form>
   </div>
 </nav>
