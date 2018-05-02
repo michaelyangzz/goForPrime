@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BusyIndicatorService } from './services/busy-indicator.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'app';
+
+  constructor(private bs: BusyIndicatorService) { }
+
   ngOnInit() {
   }
 }

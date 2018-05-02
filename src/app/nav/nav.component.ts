@@ -3,6 +3,7 @@ import { MenuItemViewModel, MenuItem } from '../models/menuItem';
 import { ConvertMenuListToTree } from '../shared/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -30,5 +31,4 @@ export class NavComponent implements OnInit {
   toggleNav() {
     this.collapseNavbar = !this.collapseNavbar;
   }
-
 }

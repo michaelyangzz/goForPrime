@@ -13,6 +13,7 @@ import { SuperadminComponent } from './superadmin/superadmin.component';
 import { PermissionadminComponent } from './permissionadmin/permissionadmin.component';
 import { RoleadminComponent } from './roleadmin/roleadmin.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { BusyIndicatorService } from './services/busy-indicator.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { AdduserComponent } from './adduser/adduser.component';
   imports: [
     BrowserModule, BrowserAnimationsModule, NgbModule.forRoot(), AppRoutingModule, UicontrolsModule
   ],
-  providers: [],
+  providers: [BusyIndicatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

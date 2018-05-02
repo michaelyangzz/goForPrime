@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { BusyIndicatorComponent } from './busy-indicator/busy-indicator.component';
-import { BusyIndicatorService } from './busy-indicator/busy-indicator.component';
 
 @NgModule({
   imports: [
@@ -10,7 +9,7 @@ import { BusyIndicatorService } from './busy-indicator/busy-indicator.component'
   ],
   declarations: [SearchBoxComponent, BusyIndicatorComponent],
   exports: [SearchBoxComponent, BusyIndicatorComponent],
-  providers: [BusyIndicatorService]
+  providers: []
 })
 export class UicontrolsModule { }
 

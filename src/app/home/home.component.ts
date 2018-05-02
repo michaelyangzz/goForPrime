@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BusyIndicatorService } from '../services/busy-indicator.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bs: BusyIndicatorService) { }
 
   ngOnInit() {
+  }
+
+  start() {
+    this.bs.startWork();
+  }
+
+  done() {
+    this.bs.doneWork();
   }
 
 }
