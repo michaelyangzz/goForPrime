@@ -34,5 +34,6 @@ export class BusyIndicatorComponent implements OnInit {
   constructor(private bs: BusyIndicatorService) { }
 
   ngOnInit() {
+    this.bs.startWork();
   }
 }
