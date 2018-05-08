@@ -1,0 +1,11 @@
+<dx-select-box [id]="model.key" [formControl]="control" class="bxt-form-control df-form-control background-withe" displayExpr="name" valueExpr="id"
+searchEnabled="true" placeholder="{{model.placeHolder | translate}}" [dataSource]="autoCompleteDataSource" (onSelectionChanged)="selectionChanged($event)">
+<div *dxTemplate="let data of 'item'">
+    <div class="bxt-selectbox-item">
+        <span class="icon">
+            <bxt-location-icon [iconType]="data?.typeId"></bxt-location-icon>
+        </span>
+        <span class="value">{{data?.name}}</span>
+    </div>
+</div>
+</dx-select-box>

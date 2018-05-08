@@ -1,0 +1,6 @@
+<input *ngIf="!model.isMultipleLine" [type]="model.type" class="form-control bxt-form-control df-form-control" [id]="model.key" [formControl]="control"
+    [maxlength]="model.maxlength" [placeholder]="model.placeHolder" (input)="CallMyBrotherTest()" />
+
+
+<textarea *ngIf="model.isMultipleLine" placeholder="{{ model.placeHolder | translate }}" wrap="true" class="form-control bxt-form-control df-form-control"
+    [id]="model.key" [maxlength]="model.maxlength" [formControl]="control" style="resize: none;overflow: hidden;height: 120px;"></textarea>
